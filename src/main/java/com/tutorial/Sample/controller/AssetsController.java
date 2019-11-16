@@ -30,7 +30,7 @@ public class AssetsController {
 		if(br.hasErrors()) {
 			return "assets";
 		}
-		log.info("form"+form);
+		log.info("form111111111111111111"+form);
 		model.addAttribute("assets",form);
 		return "redirect:/assets/";
 		}
