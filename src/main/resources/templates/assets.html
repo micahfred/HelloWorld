@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="TW">
+<head>
+<meta charset="UTF-8">
+<title>Sample2</title>
+</head>
+<body>
+	<form th:action="@{/assets/}" th:object=${assets} method="post">
+		<label>使用者</label>
+		<input type="text" th:field="*{userName}"/><br/>
+		<div class="alert alert-danger" th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">Error</div>
+		<label>使用日期</label>
+		<input type="text" th:field="*{useDate}" /><br/>
+		<label>電腦名稱</label>
+		<input type="text" th:field="*{compName}" /><br/>
+		<input type="submit" value="Add" />
+	</form>
+</body>
+</html>
